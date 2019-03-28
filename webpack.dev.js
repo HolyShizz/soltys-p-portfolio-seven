@@ -22,6 +22,10 @@ module.exports = {
                 }
             },
             {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
+            },
+            {
                 test: /\.(scss|css)$/,
                 use: [{
                         // creates style nodes from JS strings
@@ -86,6 +90,7 @@ module.exports = {
                 }]
             }
             */
+           
         ],
     },
     plugins: [

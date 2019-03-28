@@ -1,46 +1,78 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <title>App Shell</title>
-  <link rel="manifest" href="/manifest.json">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+    <meta charset="utf-8">
+    <title>Portfolio 7</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-  <header class="header">
-    <h1 class="header__title">App Shell</h1>
-  </header>
+    <div class="header-dark-background">
+    </div>
+    <header>
 
-  <nav class="nav">
-  ...
-  </nav>
+        <nav class="nav mdc-top-app-bar mdc-top-app-bar--fixed">
+            <div class="nav-container">
+                <div class="mdc-top-app-bar__row">
 
-  <main class="main">
-  ...
-  </main>
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                        <a href="#" class="mdc-top-app-bar__navigation-icon"><i class="fas fa-bars"></i></a>
+                    </section>
 
-  <div class="dialog-container">
-  ...
-  </div>
+                    <section class="mdc-top-app-bar__section">
+                        <div class="logo-container">
+                            <div class="logo-img">
+                            </div>
+                            <div class="logo-text">
+                                <span>blog</span>
+                            </div>
+                        </div>
+                    </section>
 
-  <div class="loader">
-    <!-- Show a spinner or placeholders for content -->
-  </div>
+                    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                        <a href="#" class="mdc-top-app-bar__action-item" aria-label="Download" alt="Download">
+                            <i class="fab fa-tumblr"></i>
+                        </a>
+                        <a href="#" class="mdc-top-app-bar__action-item" aria-label="Download" alt="Download">
+                            <i class="fas fa-rss"></i>
+                        </a>
+                        <a href="#" class="mdc-top-app-bar__action-item" aria-label="Download" alt="Download">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="mdc-top-app-bar__action-item" aria-label="Download" alt="Download">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="mdc-top-app-bar__action-item" aria-label="Download" alt="Download">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </section>
 
-  <script src="app.js" async></script>
-  <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  }
-  </script>
+                </div>
+            </div>
+        </nav>
+
+        <div class="content-container">
+            <div class="slider-container"
+                data-slick='{"slidesToShow": 1, "slidesToScroll": 1, "vertical": true, "verticalSwiping": true}'>
+
+                <div class="top-slide-1"></div>
+                <div class="top-slide-1"></div>
+                <div class="top-slide-1"></div>
+                <div class="top-slide-1"></div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+
+    </main>
+
 </body>
+
 </html>

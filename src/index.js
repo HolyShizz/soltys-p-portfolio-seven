@@ -1,9 +1,5 @@
 require('./assets/styles/index.scss');
 
-import '../node_modules/bootstrap/dist/js/bootstrap.min';
-
-import jquery from 'jquery';
-import popper from 'popper.js';
-
-import {MDCRipple} from '@material/ripple';
-import './assets/js/eh-main';
+import '../node_modules/jquery/dist/jquery';
+import '../node_modules/slick-carousel/slick/slick';
+import './assets/js/portfolio-7';

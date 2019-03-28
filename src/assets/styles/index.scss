@@ -1,2 +1,18 @@
-@import "./main";
+/*Normalize css for crossbrowser compatibility improvment*/
+@import "../../../node_modules/normalize.css/normalize.css";
+
+/*@material components*/
+$mdc-theme-primary: rgb(33,36,41);
+@import "@material/top-app-bar/mdc-top-app-bar";
+
+//slick-carousel styles
+    // Required Core Stylesheet
+@import "../../../node_modules/slick-carousel/slick/slick.css";
+    // Optional Theme Stylesheet
+@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+
+/*Custom styles*/
 @import "./custom.scss";
+@import "./main.scss";
+
+
