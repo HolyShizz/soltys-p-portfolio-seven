@@ -6,9 +6,9 @@ $mdc-theme-primary: rgb(33,36,41);
 @import "@material/top-app-bar/mdc-top-app-bar";
 
 //slick-carousel styles
-    // Required Core Stylesheet
+    // Required Slick core css
 @import "../../../node_modules/slick-carousel/slick/slick.css";
-    // Optional Theme Stylesheet
+    // Required optional Slick Theme Stylesheet
 @import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 /*Custom styles*/

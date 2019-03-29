@@ -7,7 +7,7 @@ module.exports = {
     entry: './src/index.js',
     devServer: {
         port: 8080,
-        contentBase: path.join(__dirname, "dist")
+        contentBase: path.join(__dirname, "src")
     },
     node: {
         fs: 'empty'
@@ -69,7 +69,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             outputPath: 'image/',
-                            name: '[name].[ext]',
+                            name: 'images/[name].[ext]',
                         },
                     },
                     // {
