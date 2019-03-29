@@ -1,18 +1,37 @@
 /*Normalize css for crossbrowser compatibility improvment*/
 @import "../../../node_modules/normalize.css/normalize.css";
 
-/*@material components*/
-$mdc-theme-primary: rgb(33,36,41);
-@import "@material/top-app-bar/mdc-top-app-bar";
 
+//Bootstrap Grid
+@import "bootstrap/scss/bootstrap-grid.scss";
+
+
+//@material components
+$mdc-theme-primary: rgb(33, 32, 41);
+$mdc-theme-on-primary: white;
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/textfield/mdc-text-field";
+.mdc-text-field__input {
+    border-bottom: 1px solid transparent;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input  {
+    border-bottom-color: transparent;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled),
+.mdc-text-field--fullwidth:not(.mdc-text-field--textarea):not(.mdc-text-field--disabled) {
+    background-color: white;
+}
+
+@import "@material/button/mdc-button";
+   
 //slick-carousel styles
-    // Required Slick core css
+// Required Slick core css
 @import "../../../node_modules/slick-carousel/slick/slick.css";
-    // Required optional Slick Theme Stylesheet
-@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
+// Required optional Slick Theme Stylesheet
+//@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 /*Custom styles*/
 @import "./custom.scss";
 @import "./main.scss";
-
-

@@ -22,9 +22,6 @@
     },
     "homepage": "",
     "dependencies": {
-        "@material/button": "^0.44.1",
-        "@material/theme": "^1.1.0",
-        "bootstrap": "^4.3.1",
         "jquery": "^3.3.1",
         "normalize.css": "^8.0.1",
         "popper.js": "^1.14.7",
@@ -33,7 +30,10 @@
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.8.1",
         "@material/base": "^0.41.0",
+        "@material/button": "^0.44.1",
         "@material/card": "^0.44.1",
+        "@material/textfield": "^1.1.0",
+        "@material/theme": "^1.1.0",
         "@material/top-app-bar": "^1.0.1",
         "@material/typography": "^0.44.1",
         "ajv": "^6.9.1",
@@ -41,6 +41,7 @@
         "babel-core": "^6.26.3",
         "babel-loader": "^7.1.5",
         "babel-preset-env": "^1.7.0",
+        "bootstrap": "^4.3.1",
         "clean-webpack-plugin": "^0.1.19",
         "css-loader": "^2.1.1",
         "cssnano": "^4.1.10",
