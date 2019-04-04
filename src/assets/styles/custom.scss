@@ -214,9 +214,9 @@ header {
 
     //Material button custom styles
     .mdc-button {
-        @include mdc-button-container-fill-color($mdc-theme-primary);
-        @include mdc-button-ink-color(whitesmoke);
-        @include mdc-button-outline-color($mdc-theme-on-primary);
+        //@include mdc-button-container-fill-color($mdc-theme-primary);
+        //@include mdc-button-ink-color(whitesmoke);
+        //@include mdc-button-outline-color($mdc-theme-on-primary);
         border-style: solid;
         border-width: 1px;
         width: 100%;
@@ -236,22 +236,26 @@ main {
 
 .content-card {
     width: 360px;
-    margin-top: 50px;
+    margin-top: 30px;
     position: relative;
 }
 
 .content-card--dark-bg {
     @include mdc-card-fill-color($mdc-theme-primary);
 }
+
 .mdc-card__primary-action--dark {
     @include mdc-states($mdc-theme-secondary, false);
 }
+
 .content-card--on-dark-text {
     color: whitesmoke;
 }
+
 .content-card--white-bg {
     background-color: white;
 }
+
 .content-card__image {
     background-image: url("../images/top_slide_1.png");
     height: 255px;
@@ -290,21 +294,30 @@ main {
 }
 
 .content-card__paragraph {
-        font-size: 15px;
-        font-family: 'Hind-Light';
-        color: rgb(70, 70, 70);
-        line-height: 1.867;
-        text-align: center;
-        width: 300px;
+    font-size: 15px;
+    font-family: 'Hind-Light';
+    color: rgb(70, 70, 70);
+    line-height: 1.867;
+    text-align: center;
+    width: 300px;
 }
 
-.content-card__paragraph--on-dark {
+.typography__paragraph--on-dark {
     font-size: 15px;
     font-family: 'Hind-Light';
     color: whitesmoke;
     line-height: 1.867;
-    text-align: center;
     width: 300px;
+}
+
+.content-card__button--on-dark {
+    @include mdc-button-ink-color(white);
+    font-size: 17px;
+    font-family: 'Hind-Light';
+    text-decoration: underline;
+    line-height: 1.647;
+    text-align: center;
+    height: 50px;
 }
 
 .content-card__decoration-icon {
@@ -347,14 +360,13 @@ main {
     text-align: center;
     height: 30px;
     border-width: 0 1px 0 1px;
-    border-color: whitesmoke;
-    @include mdc-button-shape-radius(0, false);
     @include mdc-button-outline-color(rgb(215, 215, 215));
 }
 
 .content-card__social-button {
     min-width: 40px;
 }
+
 .content-card__social-icon {
     font-size: 14px;
     color: rgb(70, 70, 70);
@@ -363,8 +375,72 @@ main {
     padding: 0 5px;
 }
 
+//masonry grid container styles
 .grid {
-   max-width: 1530px;
-   margin: 0 auto;
-   float: left;
+    max-width: 1530px;
+    margin: 0 auto;
 }
+
+//footer styles
+.footer {
+    background: $mdc-theme-primary;
+    padding: 50px 0;
+}
+
+.footer__typography-heading {
+    font-size: 16px;
+    font-family: 'Montserrat-Bold';
+    color: rgb(249, 249, 251);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.75;
+    text-align: left;
+}
+
+.footer__about-sign-container {
+    background-color: rgb(58, 60, 73);
+    width: 361px;
+    height: 147px;
+    position: relative;
+    margin-top: 15px;
+}
+
+.footer__about-sign-calygraphy {
+    font-size: 40px;
+    font-family: 'MrsSaintDelafield-Regular';
+    color: $mdc-theme-on-primary;
+    line-height: 0.6;
+    text-align: left;
+    -moz-transform: matrix(0.89071332367522, -0.13764529365174, 0.13764529365174, 0.89071332367521, 0, 0);
+    -webkit-transform: matrix(0.89071332367522, -0.13764529365174, 0.13764529365174, 0.89071332367521, 0, 0);
+    -ms-transform: matrix(0.89071332367522, -0.13764529365174, 0.13764529365174, 0.89071332367521, 0, 0);
+    position: absolute;
+    right: 5px;
+    bottom: 15px;
+}
+
+.footer__typography-paragraph {
+    font-size: 15px;
+    font-family: 'Hind-Light';
+    line-height: 1.867;
+    text-align: left;
+    margin: 0;
+}
+
+.footer__typography-paragraph--on-dark {
+    color: $mdc-theme-on-primary;
+}
+
+.footer__typography-post-author {
+    font-size: 14px;
+    font-family: "FontAwesome";
+    color: rgb(249, 249, 251);
+    line-height: 1.714;
+    text-align: left;
+}
+
+.footer__typography-post-author:nth-of-type(1) {
+    margin-bottom: 30px;
+}
+
+  

@@ -34,7 +34,12 @@
     font-weight: normal;
 }
 
-
+@font-face {
+    font-family: 'MrsSaintDelafield-Regular';
+    src: url('../fonts/MrsSaintDelafield-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/MrsSaintDelafield-Regular.woff') format('woff'), url('../fonts/MrsSaintDelafield-Regular.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 
 html,body {
     background-color: rgb(249, 249, 251);
@@ -68,3 +73,16 @@ a {
     margin: 0 auto;
     position: relative;
 }
+/*Material text-field styles
+.mdc-text-field__input {
+    border-bottom: 1px solid transparent;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input  {
+    border-bottom-color: transparent;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled),
+.mdc-text-field--fullwidth:not(.mdc-text-field--textarea):not(.mdc-text-field--disabled) {
+    background-color: white;
+}*/

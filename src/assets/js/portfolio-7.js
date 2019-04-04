@@ -24,8 +24,8 @@
         MDCRipple
     } from '@material/ripple';
     const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action, .mdc-card__primary-action--dark';
-    const ripples = [].map.call(document.querySelectorAll(selector), function (el) {
-        return new MDCRipple(el);
+    const ripples = [].map.call(document.querySelectorAll(selector), function (rl) {
+        return new MDCRipple(rl);
     });
     import {
         MDCTopAppBar
