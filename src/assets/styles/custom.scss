@@ -240,6 +240,12 @@ main {
     position: relative;
 }
 
+.content-card__bottom-bar {
+        border-top-width: 1px;
+        border-top-color: rgb(215, 215, 215);
+        border-top-style: solid;
+}
+
 .content-card--dark-bg {
     @include mdc-card-fill-color($mdc-theme-primary);
 }
@@ -311,6 +317,7 @@ main {
 }
 
 .content-card__button--on-dark {
+    @include mdc-states($mdc-theme-secondary, false);
     @include mdc-button-ink-color(white);
     font-size: 17px;
     font-family: 'Hind-Light';
@@ -361,6 +368,7 @@ main {
     height: 30px;
     border-width: 0 1px 0 1px;
     @include mdc-button-outline-color(rgb(215, 215, 215));
+    @include mdc-button-shape-radius( 0px, none);
 }
 
 .content-card__social-button {
