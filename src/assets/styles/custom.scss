@@ -1,22 +1,8 @@
-.header-dark-background {
-    width: 100%;
-    min-height: 350px;
-    background: #212429;
-    position: absolute;
-    z-index: -1;
-}
-
-.content-container,
-.nav-container {
-    max-width: 1530px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-
+//Header style
 header {
     overflow: auto;
 
+    //Navigation styles
     nav.nav {
 
         .mdc-top-app-bar__row {
@@ -63,9 +49,11 @@ header {
         }
     }
 
+    //Slider container styles
     .slider-container {
         margin-top: 55px;
 
+        //Slider image styles
         .top-slide-1 {
             background-image: url("../images/top_slide_1.png");
             background-size: cover;
@@ -74,6 +62,9 @@ header {
             position: relative;
         }
 
+        //end of Slider image styles 
+
+        //Slider description styles
         .slider-nav-text {
             position: absolute;
             right: 0px;
@@ -96,6 +87,9 @@ header {
             }
         }
 
+        //end of Slider description styles
+
+        //Slider navigation styles 
         .slider-arrow-dots-container {
             position: absolute;
             right: 0;
@@ -169,14 +163,18 @@ header {
                 }
             }
         }
+
+        //end of Slider navigation styles 
     }
+
+    //end of Slider container styles
 }
 
-//header styles ended
+//end of Header style
 
-//subscription-form-container styles
+//Newsletter block styles
 .subscription-form-container {
-    margin-top: 30px;
+    padding: 30px 0;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -203,6 +201,7 @@ header {
         text-align: left;
     }
 
+    //Material text-field custom styles
     .mdc-text-field {
         width: 100%;
     }
@@ -211,6 +210,9 @@ header {
         top: 12px;
     }
 
+    //end of Material text-field custom styles
+
+    //Material button custom styles
     .mdc-button {
         @include mdc-button-container-fill-color($mdc-theme-primary);
         @include mdc-button-ink-color(whitesmoke);
@@ -221,4 +223,101 @@ header {
         height: 100%;
     }
 
+    //end of Material button custom styles
+}
+
+//end of Newsletter block styles
+
+//Content section styles
+.main-content {
+    margin: 30px auto;
+    position: relative;
+}
+
+.content-card {
+    width: 360px;
+    margin-top: 50px;
+    position: relative;
+}
+
+.content-card__image {
+    background-image: url("../images/top_slide_1.png");
+    height: 255px;
+}
+
+.content-card__text-container {
+    padding: 40px 0;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    
+}
+
+.content-card__heading {
+    font-size: 20px;
+    font-family: 'Montserrat-Bold';
+    text-transform: uppercase;
+    line-height: 1.4;
+    text-decoration: none;
+    margin: 0;
+}
+
+.content-card__subheading {
+    font-size: 14px;
+    font-family: 'Hind-Regular';
+    color: rgb(153, 153, 153);
+    @include mdc-button-ink-color(rgb(153, 153, 153));
+    text-transform: uppercase;
+    line-height: 1.714;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.content-card__decoration-icon {
+    width: 40px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: whitesmoke;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.content-card__button {
+    margin: 40px 0;
+    font-size: 14px;
+    font-family: 'Hind-Medium';
+    color: rgb(33, 33, 33);
+    text-transform: uppercase;
+    line-height: 1.714;
+    text-align: center;
+    height: 30px;
+    border-width: 0 1px 0 1px;
+    border-color: whitesmoke;
+    @include mdc-button-shape-radius(0, false);
+    @include mdc-button-outline-color(rgb(215, 215, 215));
+}
+
+.content-card__social-button {
+    min-width: 40px;
+}
+.content-card__social-icon {
+    font-size: 14px;
+    color: rgb(70, 70, 70);
+    line-height: 2;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.grid {
+   max-width: 1530px;
+   margin: 0 auto;
+   float: left;
 }

@@ -9,7 +9,10 @@
 //@material components
 $mdc-theme-primary: rgb(33, 32, 41);
 $mdc-theme-on-primary: white;
+$mdc-theme-secondary: whitesmoke;
+$mdc-theme-on-secondary: rgb(33, 33, 33);
 @import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/top-app-bar/mixins";
 @import "@material/textfield/mdc-text-field";
 .mdc-text-field__input {
     border-bottom: 1px solid transparent;
@@ -25,7 +28,7 @@ $mdc-theme-on-primary: white;
 }
 
 @import "@material/button/mdc-button";
-   
+@import "@material/card/mdc-card";
 //slick-carousel styles
 // Required Slick core css
 @import "../../../node_modules/slick-carousel/slick/slick.css";

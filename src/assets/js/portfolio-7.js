@@ -14,18 +14,19 @@ $(document).ready(function(){
         dots: true,
         appendDots: '.slider-dots-container'
       });
-  });   
-    //Material components
-    import {MDCRipple} from '@material/ripple';
+  }); 
+  //Material components
+import {MDCRipple} from '@material/ripple';
+const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
+const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+  return new MDCRipple(el);
+});
 import {MDCTopAppBar} from '@material/top-app-bar/index';
-import {MDCTextField} from '@material/textfield';
-// Instantiation
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
-//const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
+topAppBar.unbounded = true;
+import {MDCTextField} from '@material/textfield';
 const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function(el) {
     return new MDCTextField(el);
   });
-const buttonRipple = [].map.call(document.querySelectorAll('.mdc-button'), function(el) {
-    return new MDCRipple(el);
-  });
+
