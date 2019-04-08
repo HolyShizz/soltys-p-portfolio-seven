@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -149,27 +149,29 @@
             <div class="content-container">
                 <div class="subscription-form-container">
                     <div class="container-fluid px-0">
-                        <div class="row no-gutters justify-content-xs-center justify-content-md-between">
+                        <div class="row no-gutters justify-content-xs-start justify-content-lg-between">
                             <div class="col-xs-12 col-xl-2 text-left mb-3">
                                 <div class="text-description">
                                     <p>Signup for newsletters</p>
                                 </div>
                             </div>
-                            <div class="col-xl-3 col-xs-12 col-md-6 mb-1 d-flex justify-content-sm-center">
+                           
+                            <div class="col-xl-3 col-xs-12 col-md-5 mb-3">
                                 <div class="mdc-text-field ">
                                     <input type="text" id="my-text-field1" class="mdc-text-field__input">
                                     <label class="mdc-floating-label" for="my-text-field1">YOUR NAME</label>
                                     <div class="mdc-line-ripple"></div>
                                 </div>
                             </div>
-                            <div class="col-xs-12 col-md-6 col-xl-3 mb-1 d-flex justify-content-sm-center">
+                            <div class="col-xs-12 col-md-5 col-xl-3 mb-3">
                                 <div class="mdc-text-field ">
                                     <input type="text" id="my-text-field2" class="mdc-text-field__input">
                                     <label class="mdc-floating-label" for="my-text-field2">YOUR EMAIL ADDRESS</label>
                                     <div class="mdc-line-ripple"></div>
                                 </div>
                             </div>
-                            <div class="col-xl-2 col-md-6 mb-1 d-flex justify-content-sm-center">
+                          
+                            <div class="col-xl-2 col-md-5">
                                 <button class="mdc-button mdc-button--outlined mdc-card__primary-action--dark">
                                     <span class="mdc-button__label ">Subscribe!</span>
                                 </button>
@@ -185,11 +187,7 @@
         <main class="main">
             <div class="main-content content-container">
 
-                <div class="grid" data-masonry='{"itemSelector": ".mdc-card",
-                        "columnWidth": 360,
-                        "gutter": 10,
-                        "fitWidth": true,
-                        "horizontalOrder": true}'>
+                <div class="grid">
 
                     <div class="content-card content-card__simple mdc-card grid-item">
                         <div class="content-card__decoration-icon">
@@ -876,7 +874,9 @@
             </div>
         </footer>
     </div>
-    <script src="bundle.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+    <script src="./bundle.js"></script>
+    
 </body>
 
 </html>
