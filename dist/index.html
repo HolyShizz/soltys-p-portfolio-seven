@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -51,8 +51,10 @@
             </nav>
         </div>
     </aside>
+
     <div class="mdc-drawer-scrim"></div>
-    <div class="mdc-drawer-app-content" id="main-content">
+
+    <div class="mdc-drawer-app-content main-content " id="main-content">
         <div class="header-dark-background">
         </div>
         <div class="bg-whitesmoke">
@@ -75,7 +77,8 @@
                                 </div>
                             </section>
 
-                            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+                            <section
+                                class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end mdc-top-app-bar__mobile--360"
                                 role="toolbar">
                                 <a href="#" class="mdc-top-app-bar__action-item mdc-ripple-surface"
                                     aria-label="Download" alt="Download">
@@ -155,7 +158,7 @@
                                     <p>Signup for newsletters</p>
                                 </div>
                             </div>
-                           
+
                             <div class="col-xl-3 col-xs-12 col-md-5 mb-3">
                                 <div class="mdc-text-field ">
                                     <input type="text" id="my-text-field1" class="mdc-text-field__input">
@@ -170,7 +173,7 @@
                                     <div class="mdc-line-ripple"></div>
                                 </div>
                             </div>
-                          
+
                             <div class="col-xl-2 col-md-5">
                                 <button class="mdc-button mdc-button--outlined mdc-card__primary-action--dark">
                                     <span class="mdc-button__label ">Subscribe!</span>
@@ -180,71 +183,79 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
 
+
+
         <main class="main">
-            <div class="main-content content-container">
+            <div class="content-container">
 
                 <div class="grid">
+                    <div class="grid-sizer">
 
-                    <div class="content-card content-card__simple mdc-card grid-item">
-                        <div class="content-card__decoration-icon">
-                            <i class="fas fa-pen" style="font-size:1.3rem;color: white"></i>
-                        </div>
+                    </div>
 
-                        <div class="content-card__text-container content-card--white-bg">
+                    <div class="grid-item">
+                        <div class="content-card content-card__simple mdc-card grid-item">
                             <div class="content-card__decoration-icon">
-                                <i class="far fa-image" style="font-size:1.3rem"></i>
+                                <i class="fas fa-pen" style="font-size:1.3rem;color: white"></i>
                             </div>
-                            <button class="mdc-button content-card__subheading"><span
-                                    class="mdc-button__label">Travelling</span></button>
-                            <h3 class="content-card__heading">Travel best adventure</h3>
 
-                            <button class="mdc-button content-card__subheading"><span class="mdc-button__label">january
-                                    25, 2016</span></button>
-                            <p class="content-card__paragraph">
-                                As per Lorm ipsum dolor sitamet,
-                                consectetur adipisicing elits, sed do Now eiusmod tempor havei ut labores et dolore
-                                magna aliqusa. Ut wenim ad minim veniam, quis
-                                its a snostrud now is the ullamco
-                                aliquip ex ea commodo .
-                            </p>
-                            <button
-                                class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button content-card__button">
-                                <span class="mdc-button__label">Read More</span>
-                            </button>
-                        </div>
+                            <div class="content-card__text-container content-card--white-bg">
+                                <div class="content-card__decoration-icon">
+                                    <i class="far fa-image" style="font-size:1.3rem"></i>
+                                </div>
+                                <button class="mdc-button content-card__subheading"><span
+                                        class="mdc-button__label">Travelling</span></button>
+                                <h3 class="content-card__heading">Travel best adventure</h3>
 
-                        <div class="mdc-card__actions content-card__bottom-bar">
-                            <div class="mdc-card__action-buttons">
-                                <button class="mdc-button mdc-card__action mdc-card__action--button">
-                                    <i class="far fa-comments content-card__social-icon"></i><span
-                                        class="mdc-button__label content-card__subheading">06 comments</span>
+                                <button class="mdc-button content-card__subheading"><span
+                                        class="mdc-button__label">january
+                                        25, 2016</span></button>
+                                <p class="content-card__paragraph">
+                                    As per Lorm ipsum dolor sitamet,
+                                    consectetur adipisicing elits, sed do Now eiusmod tempor havei ut labores et dolore
+                                    magna aliqusa. Ut wenim ad minim veniam, quis
+                                    its a snostrud now is the ullamco
+                                    aliquip ex ea commodo .
+                                </p>
+                                <button
+                                    class="mdc-button mdc-button--outlined mdc-card__action mdc-card__action--button content-card__button">
+                                    <span class="mdc-button__label">Read More</span>
                                 </button>
                             </div>
-                            <div class="mdc-card__action-icons">
-                                <button
-                                    class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
-                                    <i class="fab fa-facebook-f content-card__social-icon"></i>
-                                </button>
-                                <button
-                                    class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
-                                    <i class="fab fa-twitter content-card__social-icon"></i>
-                                </button>
-                                <button
-                                    class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
-                                    <i class="fab fa-pinterest-p content-card__social-icon"></i>
-                                </button>
-                                <button
-                                    class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
-                                    <i class="fab fa-twitch content-card__social-icon"></i>
-                                </button>
+
+                            <div class="mdc-card__actions content-card__bottom-bar">
+                                <div class="mdc-card__action-buttons">
+                                    <button class="mdc-button mdc-card__action mdc-card__action--button">
+                                        <i class="far fa-comments content-card__social-icon"></i><span
+                                            class="mdc-button__label content-card__subheading">06 comments</span>
+                                    </button>
+                                </div>
+                                <div class="mdc-card__action-icons">
+                                    <button
+                                        class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
+                                        <i class="fab fa-facebook-f content-card__social-icon"></i>
+                                    </button>
+                                    <button
+                                        class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
+                                        <i class="fab fa-twitter content-card__social-icon"></i>
+                                    </button>
+                                    <button
+                                        class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
+                                        <i class="fab fa-pinterest-p content-card__social-icon"></i>
+                                    </button>
+                                    <button
+                                        class="mdc-icon-button mdc-button mdc-button--dense content-card__social-button">
+                                        <i class="fab fa-twitch content-card__social-icon"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="grid-item">
                     <div class="content-card content-card__with-image mdc-card grid-item">
                         <div class="mdc-card__primary-action">
                             <div class="mdc-card__media mdc-card__media--16-9 content-card__image">
@@ -294,7 +305,8 @@
                             </div>
                         </div>
                     </div>
-
+                    </div>
+                    <div class="grid-item">
                     <div class="content-card content-card__simple mdc-card grid-item">
                         <div class="content-card__decoration-icon">
                             <i class="fas fa-pen" style="font-size:1.3rem;color: white"></i>
@@ -347,7 +359,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
+                    <div class="grid-item">
                     <div class="content-card content-card__with-video mdc-card grid-item">
                         <div class="content-card__decoration-icon--white">
                             <i class="fas fa-video" style="font-size:1.3rem"></i>
@@ -400,7 +414,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
+                    <div class="grid-item">
                     <div class="content-card content-card__simple mdc-card grid-item">
                         <div class="content-card__decoration-icon">
                             <i class="fas fa-pen" style="font-size:1.3rem;color: white"></i>
@@ -453,7 +469,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
+                    <div class="grid-item">
                     <div class="content-card content-card__simple mdc-card grid-item">
                         <div class="content-card__decoration-icon">
                             <i class="fas fa-pen" style="font-size:1.3rem;color: white"></i>
@@ -509,7 +527,9 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
+                    <div class="grid-item">
                     <div class="content-card mdc-card grid-item content-card__link content-card--dark-bg">
                         <div class="content-card__decoration-icon--white">
                             <i class="fas fa-link" style="font-size:1.3rem"></i>
@@ -549,7 +569,10 @@
                             </div>
                         </div>
                     </div>
+                    </div>
 
+
+ <div class="grid-item">
                     <div class="content-card mdc-card grid-item content-card__quote content-card--dark-bg">
                         <div class="content-card__decoration-icon">
                             <i class="fas fa-quote-left" style="font-size:1.3rem;color: white"></i>
@@ -594,7 +617,9 @@
                             </div>
                         </div>
                     </div>
+ </div>
 
+ <div class="grid-item">
                     <div class="content-card content-card__simple mdc-card grid-item">
                         <div class="content-card__decoration-icon">
                             <i class="fas fa-pen" style="font-size:1.3rem;color: white"></i>
@@ -647,7 +672,9 @@
                             </div>
                         </div>
                     </div>
+ </div>
 
+ <div class="grid-item">
                     <div class="content-card mdc-card grid-item content-card__quote content-card--dark-bg">
                         <div class="content-card__decoration-icon">
                             <i class="fas fa-quote-left" style="font-size:1.3rem;color: white"></i>
@@ -692,7 +719,9 @@
                             </div>
                         </div>
                     </div>
+ </div>
 
+ <div class="grid-item">
                     <div class="content-card content-card__with-image mdc-card grid-item">
                         <div class="mdc-card__primary-action">
                             <div class="mdc-card__media mdc-card__media--16-9 content-card__image">
@@ -742,6 +771,7 @@
                             </div>
                         </div>
                     </div>
+ </div>
 
                     <!---  <div class="content-card content-card__audio mdc-card grid-item">
                     <div class="content-card__decoration-icon">
@@ -796,7 +826,7 @@
 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-lg mb-5">
+                        <div class="col-lg-6 col-xl-3 col-12 mb-5">
                             <p class="footer__typography-heading">
                                 About blog
                             </p>
@@ -808,7 +838,7 @@
                                 <span class="footer__about-sign-calygraphy">Nathaliya Jhone</span>
                             </div>
                         </div>
-                        <div class="col-lg mb-5">
+                        <div class="col-lg-6 mb-5 col-xl-3 col-12">
                             <p class="footer__typography-heading">
                                 latest tweets
                             </p>
@@ -824,7 +854,7 @@
                                 Developer Advocate hav a great work this knows the very well is
                             </p>
                         </div>
-                        <div class="col-lg mb-5">
+                        <div class="col-lg-6 mb-5 col-xl-3 col-12">
                             <p class="footer__typography-heading">
                                 Follow Me Instagram
                             </p>
@@ -853,7 +883,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg mb-1">
+                        <div class="col-lg-6 mb-1 col-xl-3 col-12">
                             <p class="footer__typography-heading">
                                 latest comments
                             </p>
@@ -876,7 +906,6 @@
     </div>
     <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
     <script src="./bundle.js"></script>
-    
 </body>
 
 </html>
