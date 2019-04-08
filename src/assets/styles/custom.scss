@@ -57,8 +57,9 @@ header {
         .top-slide-1 {
             background-image: url("../images/top_slide_1.png");
             background-size: cover;
-            width: 1530px;
-            height: 580px;
+            max-width: 1530px;
+            width: 100%;
+            height: $slider-height;
             position: relative;
         }
 
@@ -174,7 +175,7 @@ header {
 
 //Newsletter block styles
 .subscription-form-container {
-    padding: 30px 0;
+    padding: 25px 0;
     display: flex;
     align-items: center;
     text-transform: uppercase;
@@ -189,6 +190,7 @@ header {
         text-align: left;
         width: 100%;
         margin: 0;
+        max-width: 200px;
     }
 
     label,
@@ -203,7 +205,8 @@ header {
 
     //Material text-field custom styles
     .mdc-text-field {
-        width: 100%;
+        width: 95%;
+        margin: 10px 10px 10px 20px;
     }
 
     .mdc-text-field .mdc-floating-label {
@@ -214,13 +217,14 @@ header {
 
     //Material button custom styles
     .mdc-button {
-        //@include mdc-button-container-fill-color($mdc-theme-primary);
-        //@include mdc-button-ink-color(whitesmoke);
-        //@include mdc-button-outline-color($mdc-theme-on-primary);
+        @include mdc-button-container-fill-color($mdc-theme-primary);
+        @include mdc-button-ink-color(whitesmoke);
+        @include mdc-button-outline-color($mdc-theme-on-primary);
         border-style: solid;
         border-width: 1px;
         width: 100%;
-        height: 100%;
+        height: $subscription-text-field-h;
+        margin-left: auto;
     }
 
     //end of Material button custom styles
@@ -433,6 +437,7 @@ main {
     line-height: 1.867;
     text-align: left;
     margin: 0;
+    max-width: 339px;
 }
 
 .footer__typography-paragraph--on-dark {

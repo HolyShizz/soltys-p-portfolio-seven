@@ -36,12 +36,13 @@
 
 @font-face {
     font-family: 'MrsSaintDelafield-Regular';
-    src: url('../fonts/MrsSaintDelafield-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/MrsSaintDelafield-Regular.woff') format('woff'), url('../fonts/MrsSaintDelafield-Regular.ttf')  format('truetype');
+    src: url('../fonts/MrsSaintDelafield-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/MrsSaintDelafield-Regular.woff') format('woff'), url('../fonts/MrsSaintDelafield-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-html,body {
+html,
+body {
     background-color: rgb(249, 249, 251);
     height: 100%;
 }
@@ -52,7 +53,7 @@ a {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .header-dark-background {
@@ -72,17 +73,29 @@ a {
     width: 100%;
     margin: 0 auto;
     position: relative;
-}
-/*Material text-field styles
-.mdc-text-field__input {
-    border-bottom: 1px solid transparent;
+ 
 }
 
-.mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input  {
-    border-bottom-color: transparent;
+//MDC Drawer additional CSS.
+//Link to official MDC-Drawer doc page: "https://material.io/develop/web/components/drawers/")
+
+body {
+    display: flex;
+    height: 100vh;
 }
 
-.mdc-text-field:not(.mdc-text-field--disabled),
-.mdc-text-field--fullwidth:not(.mdc-text-field--textarea):not(.mdc-text-field--disabled) {
-    background-color: white;
-}*/
+.mdc-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+    position: relative;
+}
+
+.main-content {
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 10px;
+}
+
+.app-bar {
+    position: absolute;
+}
