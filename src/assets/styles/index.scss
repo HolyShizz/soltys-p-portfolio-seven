@@ -1,18 +1,24 @@
-/*Normalize css for crossbrowser compatibility improvment
-@import "../../../node_modules/normalize.css/normalize.css";*/
+/*Normalize css for crossbrowser compatibility improvment*/
+@import "../../../node_modules/normalize.css/normalize.css";
 
 
 //Bootstrap Grid
+/*@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+
+
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/grid";*/
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-
-
 //@material components
-
 $mdc-theme-primary: rgb(33, 32, 41);
 $mdc-theme-on-primary: white;
 $mdc-theme-secondary: whitesmoke;
 $mdc-theme-on-secondary: rgb(33, 33, 33);
+@import "@material/layout-grid/mdc-layout-grid";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/top-app-bar/mdc-top-app-bar";

@@ -48,8 +48,10 @@ body {
 }
 
 button,
-a {
+a, .slick-dots li, button.slick-arrow, .mdc-button {
     outline: none;
+    outline-color: transparent;
+    overflow: hidden;
 }
 
 a {
@@ -61,6 +63,9 @@ a {
     min-height: 350px;
     background: #212429;
     position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 .bg-whitesmoke {
@@ -93,7 +98,6 @@ body {
 .main-content {
     overflow: auto;
     height: 100%;
-    padding-bottom: 10px;
 }
 
 .app-bar {

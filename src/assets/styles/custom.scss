@@ -175,9 +175,8 @@ header {
 
 //Newsletter block styles
 .subscription-form-container {
-    padding: 25px 0;
-    display: flex;
-    align-items: center;
+    padding: 25px 0 25px 20px;
+
     text-transform: uppercase;
 
     .text-description p {
@@ -205,8 +204,8 @@ header {
 
     //Material text-field custom styles
     .mdc-text-field {
-        width: 95%;
-        margin: 10px 10px 10px 20px;
+        width: 100%;
+
     }
 
     .mdc-text-field .mdc-floating-label {
@@ -224,7 +223,6 @@ header {
         border-width: 1px;
         width: 100%;
         height: $subscription-text-field-h;
-        margin-left: auto;
     }
 
     //end of Material button custom styles
@@ -245,9 +243,9 @@ main {
 }
 
 .content-card__bottom-bar {
-        border-top-width: 1px;
-        border-top-color: rgb(215, 215, 215);
-        border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(215, 215, 215);
+    border-top-style: solid;
 }
 
 .content-card--dark-bg {
@@ -372,7 +370,7 @@ main {
     height: 30px;
     border-width: 0 1px 0 1px;
     @include mdc-button-outline-color(rgb(215, 215, 215));
-    @include mdc-button-shape-radius( 0px, none);
+    @include mdc-button-shape-radius(0px, none);
 }
 
 .content-card__social-button {
@@ -391,12 +389,18 @@ main {
 .grid {
     max-width: 1530px;
     margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+ .grid-sizer {
+    width: 380px;
 }
 
 //footer styles
 .footer {
     background: $mdc-theme-primary;
-    padding: 50px 0;
+    padding-top: 50px;
 }
 
 .footer__typography-heading {
@@ -455,5 +459,3 @@ main {
 .footer__typography-post-author:nth-of-type(1) {
     margin-bottom: 30px;
 }
-
-  
