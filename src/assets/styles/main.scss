@@ -103,3 +103,7 @@ body {
 .app-bar {
     position: absolute;
 }
+
+.mdc-layout-grid {
+    @include mdc-layout-grid(desktop, 0 auto, 1530px);
+}

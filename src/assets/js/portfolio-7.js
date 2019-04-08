@@ -25,7 +25,7 @@
     });
     
 
-    //Initialize Masonry
+    /*/Initialize Masonry*/
     import Masonry from 'masonry-layout';
     var grid = document.querySelector('.grid');
     var msnry;
@@ -39,6 +39,7 @@
             fitWidth: true
         });
     });
+    
     //Material components
     import {
         MDCRipple
