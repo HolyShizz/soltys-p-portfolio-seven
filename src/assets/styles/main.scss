@@ -34,20 +34,28 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: 'MrsSaintDelafield-Regular';
+    src: url('../fonts/MrsSaintDelafield-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/MrsSaintDelafield-Regular.woff') format('woff'), url('../fonts/MrsSaintDelafield-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-
-html,body {
+html,
+body {
     background-color: rgb(249, 249, 251);
     height: 100%;
 }
 
 button,
-a {
+a, .slick-dots li, button.slick-arrow, .mdc-button {
     outline: none;
+    outline-color: transparent;
+    overflow: hidden;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .header-dark-background {
@@ -55,6 +63,9 @@ a {
     min-height: 350px;
     background: #212429;
     position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 
 .bg-whitesmoke {
@@ -67,4 +78,28 @@ a {
     width: 100%;
     margin: 0 auto;
     position: relative;
+ 
+}
+
+//MDC Drawer additional CSS.
+//Link to official MDC-Drawer doc page: "https://material.io/develop/web/components/drawers/")
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+.mdc-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+    position: relative;
+}
+
+.main-content {
+    overflow: auto;
+    height: 100%;
+}
+
+.app-bar {
+    position: absolute;
 }

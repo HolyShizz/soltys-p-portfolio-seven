@@ -3,32 +3,44 @@
 
 
 //Bootstrap Grid
-@import "bootstrap/scss/bootstrap-grid.scss";
+/*@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
 
+
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/grid";*/
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 //@material components
 $mdc-theme-primary: rgb(33, 32, 41);
 $mdc-theme-on-primary: white;
 $mdc-theme-secondary: whitesmoke;
 $mdc-theme-on-secondary: rgb(33, 33, 33);
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
 @import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/top-app-bar/mixins";
+.mdc-top-app-bar--fixed-adjust {
+    padding-top: 54px;
+}
 @import "@material/textfield/mdc-text-field";
 .mdc-text-field__input {
     border-bottom: 1px solid transparent;
 }
-
 .mdc-text-field:not(.mdc-text-field--disabled):not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mdc-text-field__input  {
     border-bottom-color: transparent;
 }
-
 .mdc-text-field:not(.mdc-text-field--disabled),
 .mdc-text-field--fullwidth:not(.mdc-text-field--textarea):not(.mdc-text-field--disabled) {
     background-color: white;
 }
-
 @import "@material/button/mdc-button";
 @import "@material/card/mdc-card";
+
+
+
 //slick-carousel styles
 // Required Slick core css
 @import "../../../node_modules/slick-carousel/slick/slick.css";
@@ -36,5 +48,7 @@ $mdc-theme-on-secondary: rgb(33, 33, 33);
 //@import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 
 /*Custom styles*/
+@import "./variables.scss";
 @import "./custom.scss";
 @import "./main.scss";
+@import "./media.scss";

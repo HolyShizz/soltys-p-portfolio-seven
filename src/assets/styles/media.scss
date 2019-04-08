@@ -1,0 +1,156 @@
+@media (max-width: 1024px) {
+    .header-dark-background {
+        min-height: $slider-height/4 + 54px;
+    }
+
+    section.mdc-top-app-bar__section--align-end a:not(.mdc-top-app-bar__mobile--1024) {
+        display: none;
+    }
+
+
+
+
+    header .slider-container {
+        .top-slide-1 {
+            height: $slider-height / 2;
+            background-image: url('../images/top-slide-1-opt.png');
+            background-position: center;
+            margin: 0 auto;
+        }
+
+        .slider-arrow-dots-container {
+            right: 50%;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            flex-direction: column;
+            width: 90%;
+            top: 85%;
+
+            .slider-dots-container {
+                margin: 0;
+                position: absolute;
+            }
+
+            .slider-arrows-container {
+                flex-direction: row-reverse;
+                height: 26px;
+                width: 85%;
+
+                .arrow-up,
+                .arrow-down {
+                    transform-origin: center;
+                    transform: rotate(90deg);
+                    height: 26px * 1.3;
+                    width: 12px * 1.3;
+                }
+            }
+
+            .slider-dots-container ul.slick-dots {
+                flex-direction: row;
+
+                li {
+                    margin: 5px;
+                    height: 12px;
+                }
+            }
+        }
+
+    }
+
+    .subscription-form-container {
+        padding: 20px 0 20px 0;
+        
+
+    .text-description {
+
+        p {
+            max-width: 200px;
+            margin: 0;
+        }
+    }
+
+    .mdc-text-field {
+        width: 100%;
+    }
+
+    .mdc-button {
+        width: 100%;
+        max-width: 289px;
+        height: 54px;
+    }
+}
+}
+
+@media (min-width: 1025px) {
+    .mdc-drawer__content .mdc-list-group {
+        display: none;
+    }
+}
+
+@media (max-width: 568px) {
+
+    .footer {
+        padding: 20px 0;
+
+        .footer__about-sign-container {
+            width: 100%;
+        }
+    }
+
+    .grid-sizer {
+        width: 360px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .mdc-top-app-bar__mobile--360 {
+        display: none;
+    }
+
+    .subscription-form-container {
+        margin: 0 auto;
+        width: 100%;
+
+        .text-description {
+
+            p {
+                max-width: 200px;
+                margin: 0;
+            }
+        }
+
+        .mdc-text-field {
+            width: 100%;
+        }
+
+        .mdc-button {
+            width: 100%;
+            height: 54px;
+        }
+
+    }
+
+    .grid-sizer {
+        width: 340px;
+    }
+
+    .content-card {
+        max-width: 340px;
+        width: 100%;
+
+        p.content-card__paragraph {
+            margin: 0;
+        }
+
+        .mdc-card__actions {
+            padding: 0 1px;
+
+            .mdc-card__action-icons {
+                margin: 0;
+            }
+        }
+
+    }
+}

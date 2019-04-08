@@ -1,5 +1,31 @@
 const path = require('path');
 
+function tryResolve_(url, sourceFilename) {
+  // Put require.resolve in a try/catch to avoid node-sass failing with cryptic libsass errors
+  // when the importer throws
+  try {
+    return require.resolve(url, {paths: [path.dirname(sourceFilename)]});
+  } catch (e) {
+    return '';
+  }
+}
+
+function tryResolveScss(url, sourceFilename) {
+  // Support omission of .scss and leading _
+  const normalizedUrl = url.endsWith('.scss') ? url : `${url}.scss`;
+  return tryResolve_(normalizedUrl, sourceFilename) ||
+    tryResolve_(path.join(path.dirname(normalizedUrl), `_${path.basename(normalizedUrl)}`),
+      sourceFilename);
+}
+
+function materialImporter(url, prev) {
+  if (url.startsWith('@material')) {
+    const resolved = tryResolveScss(url, prev);
+    return {file: resolved || url};
+  }
+  return {file: url};
+}
+
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin'); //installed via npm
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -19,8 +45,7 @@ module.exports = {
         fs: 'empty'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader',
@@ -35,8 +60,7 @@ module.exports = {
             },
             {
                 test: /\.(scss|css|sass)$/,
-                use: [
-                    {
+                use: [{
                         loader: MiniCssExtractPlugin.loader
                     },
                     {
@@ -54,15 +78,11 @@ module.exports = {
                         }
                     },
                     {
-                        // compiles Sass to CSS
                         loader: 'sass-loader',
                         options: {
-                            outputStyle: 'expanded',
-                            sourceMap: true,
-                            sourceMapContents: true,
-                            includePaths: ['./node_modules']
-                        }
-                    }
+                          importer: materialImporter
+                        },
+                      }
                 ]
             },
             {
@@ -90,9 +110,9 @@ module.exports = {
         ]
     },
     plugins: [
-       
+
         new CleanWebpackPlugin(buildPath),
-    
+
         new MiniCssExtractPlugin({
             filename: 'styles.css'
         }),
