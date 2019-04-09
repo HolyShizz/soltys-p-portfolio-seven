@@ -1,3 +1,32 @@
+    //Material components
+    import {
+        MDCRipple
+    } from '@material/ripple';
+    const selector = '.mdc-button, .mdc-card__primary-action';
+    const ripples = [].map.call(document.querySelectorAll(selector), function (rl) {
+        return new MDCRipple(rl);
+    });
+    import {
+        MDCDrawer
+    } from "@material/drawer";
+    const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+
+    import {
+        MDCTopAppBar
+    } from '@material/top-app-bar';
+
+    const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+    topAppBar.setScrollTarget(document.getElementById('main-content'));
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
+    });
+    import {
+        MDCTextField
+    } from '@material/textfield';
+    const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+        return new MDCTextField(el);
+    });
+
     //jquery for slick-carousel
     import $ from "jquery";
 
@@ -8,7 +37,6 @@
             slidesToScroll: 1,
             vertical: true,
             verticalSwiping: true,
-            zIndex: 1,
             arrows: true,
             prevArrow: '.arrow-down',
             nextArrow: '.arrow-up',
@@ -23,7 +51,7 @@
             }]
         });
     });
-    
+
 
     /*/Initialize Masonry*/
     import Masonry from 'masonry-layout';
@@ -38,32 +66,4 @@
             columnWidth: '.grid-sizer',
             fitWidth: true
         });
-    });
-    
-    //Material components
-    import {
-        MDCRipple
-    } from '@material/ripple';
-    const selector = '.mdc-button, .mdc-card__primary-action';
-    const ripples = [].map.call(document.querySelectorAll(selector), function (rl) {
-        return new MDCRipple(rl);
-    });
-    import {
-        MDCDrawer
-    } from "@material/drawer";
-    const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
-    import {
-        MDCTopAppBar
-    } from '@material/top-app-bar/index';
-
-    const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
-    const topAppBarElement = document.querySelector('.mdc-top-app-bar');
-    topAppBar.listen('MDCTopAppBar:nav', () => {
-        drawer.open = !drawer.open;
-    });
-    import {
-        MDCTextField
-    } from '@material/textfield';
-    const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
-        return new MDCTextField(el);
     });

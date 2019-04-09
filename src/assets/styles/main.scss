@@ -66,6 +66,7 @@ a {
     right: 0;
     left: 0;
     top: 0;
+    z-index: 0;
 }
 
 .bg-whitesmoke {
@@ -84,25 +85,7 @@ a {
 //MDC Drawer additional CSS.
 //Link to official MDC-Drawer doc page: "https://material.io/develop/web/components/drawers/")
 
-body {
-    display: flex;
-    height: 100vh;
-}
 
-.mdc-drawer-app-content {
-    flex: auto;
-    overflow: auto;
-    position: relative;
-}
-
-.main-content {
-    overflow: auto;
-    height: 100%;
-}
-
-.app-bar {
-    position: absolute;
-}
 
 .mdc-layout-grid {
     @include mdc-layout-grid(desktop, 0 auto, 1530px);
