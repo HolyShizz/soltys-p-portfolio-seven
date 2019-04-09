@@ -1,34 +1,6 @@
-    //Material components
-    import {
-        MDCRipple
-    } from '@material/ripple';
-    const selector = '.mdc-button, .mdc-card__primary-action';
-    const ripples = [].map.call(document.querySelectorAll(selector), function (rl) {
-        return new MDCRipple(rl);
-    });
-    import {
-        MDCDrawer
-    } from "@material/drawer";
-    const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 
-    import {
-        MDCTopAppBar
-    } from '@material/top-app-bar';
-
-    const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
-    topAppBar.setScrollTarget(document.getElementById('main-content'));
-    topAppBar.listen('MDCTopAppBar:nav', () => {
-        drawer.open = !drawer.open;
-    });
-    import {
-        MDCTextField
-    } from '@material/textfield';
-    const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
-        return new MDCTextField(el);
-    });
-
-    //jquery for slick-carousel
-    import $ from "jquery";
+import '../../../node_modules/slick-carousel/slick/slick';
+import $ from "jquery";
 
     //initializing slick-carousel
     $(document).ready(function () {
@@ -51,10 +23,10 @@
             }]
         });
     });
-
+import '../../../node_modules/masonry-layout/dist/masonry.pkgd';
 
     /*/Initialize Masonry*/
-    import Masonry from 'masonry-layout';
+   
     var grid = document.querySelector('.grid');
     var msnry;
 
@@ -67,3 +39,41 @@
             fitWidth: true
         });
     });
+
+//Material components
+import {
+    MDCRipple
+} from '@material/ripple';
+
+import {
+    MDCDrawer
+} from "@material/drawer";
+
+
+import {
+    MDCTopAppBar
+} from '@material/top-app-bar';
+
+
+import {
+    MDCTextField
+} from '@material/textfield';
+import Masonry from 'masonry-layout';
+//Material components
+
+    const selector = '.mdc-button, .mdc-card__primary-action';
+    const ripples = [].map.call(document.querySelectorAll(selector), function (rl) {
+        return new MDCRipple(rl);
+    });
+    const drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
+    const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+    topAppBar.setScrollTarget(document.getElementById('main-content'));
+    topAppBar.listen('MDCTopAppBar:nav', () => {
+        drawer.open = !drawer.open;
+    });
+    const textField = [].map.call(document.querySelectorAll('.mdc-text-field'), function (el) {
+        return new MDCTextField(el);
+    });
+
+
+
